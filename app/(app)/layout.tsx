@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/layout/shell";
 import { useAuth } from "@/lib/user-context";
-import { preloadCoreData } from "@/lib/app-data";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { currentUser, loaded } = useAuth();
@@ -13,9 +12,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (loaded && !currentUser) {
       router.replace("/login");
-    }
-    if (loaded && currentUser) {
-      preloadCoreData();
     }
   }, [loaded, currentUser, router]);
 
