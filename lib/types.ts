@@ -76,3 +76,13 @@ export interface VrEvent {
   assignedOperatorIds: string[];
   notes?: string;
 }
+
+export type Role = "admin" | "operator";
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  role: Role;
+  username?: string;
+}

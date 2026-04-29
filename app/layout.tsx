@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AppShell } from "@/components/layout/shell";
+import { AuthProvider } from "@/lib/user-context";
 
 export const metadata: Metadata = {
   title: "VR Events — Internal Platform",
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AppShell>{children}</AppShell>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
