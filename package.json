@@ -15,7 +15,9 @@
     "react-dom": "^18.3.1",
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.5.2",
-    "lucide-react": "^0.439.0"
+    "lucide-react": "^0.439.0",
+    "@supabase/ssr": "^0.5.1",
+    "@supabase/supabase-js": "^2.45.1"
   },
   "devDependencies": {
     "@types/node": "^20",
